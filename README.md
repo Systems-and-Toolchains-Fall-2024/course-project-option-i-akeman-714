@@ -409,3 +409,7 @@ _The rating used to have a format of N+m, N-m or N, I transferred them to a sing
 That's all of the features.🔚
 
 ---
+
+# PostgreSQL or NoSQL?
+
+Given that the dataset is highly structured, with comprehensive and consistent rows and columns, using a relational database like PostgreSQL offers significant advantages over a NoSQL database. PostgreSQL is designed to handle structured data efficiently, providing strict schema enforcement, data integrity, and consistency through features like ACID transactions and data constraints. It ensures that the data adheres to a predefined schema, preventing invalid data entries. In contrast, NoSQL databases are better suited for unstructured or semi-structured data, lacking strict schema enforcement, which can lead to data inconsistency in highly structured datasets like this one. In summary, for datasets with a fixed schema, PostgreSQL provides a more appropriate and reliable solution compared to NoSQL databases.

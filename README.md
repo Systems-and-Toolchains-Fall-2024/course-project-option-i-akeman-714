@@ -4,6 +4,58 @@ Jinsong Yuan & Daren Yao
 
 ANDREW ID: jinsongy | darenyao
 
+# CODE WALKTHROUGH
+
+The final course project local code is `course_project_local_final_11_12.ipynb`. For the cloud version of the code, refer to [Cloud Code Version].
+
+## Table of Contents
+1. [Overview](#overview)
+2. [Task Structure](#task-structure)
+3. [Function Descriptions by Task](#function-descriptions-by-task)
+    - [Task 1](#task-1)
+    - [Task 2](#task-2)
+    - [Task 3](#task-3)
+    - [Task 4](#task-4)
+4. [Environment and System Requirements](#environment-and-system-requirements)
+5. [Adjustments for Different Environments](#adjustments-for-different-environments)
+
+---
+
+### Overview
+Provide a brief summary of the purpose of your course project, including objectives and key deliverables.
+
+### Task Structure
+The code is organized into four main tasks, each performing distinct functions related to the project goals. In the local notebook (`course_project_local_final_11_12.ipynb`), Tasks 1, 2, and 3 are clearly divided by markdown sections, while Task 4 is handled separately.
+
+### Function Descriptions by Task
+
+#### Task 1
+- **[Function Name]**: Describe the purpose and operation of this function.
+- **[Function Name]**: Further explanations, if necessary.
+
+#### Task 2
+- **[Function Name]**: Describe the purpose and operation of this function.
+- **[Function Name]**: Further explanations, if necessary.
+
+#### Task 3
+- **[Function Name]**: Describe the purpose and operation of this function.
+- **[Function Name]**: Further explanations, if necessary.
+
+#### Task 4
+- **[Function Name]**: Describe the purpose and operation of this function.
+- **[Function Name]**: Further explanations, if necessary.
+
+### Environment and System Requirements
+List any dependencies, software versions, or packages needed to run the code. Include any Python package versions, hardware requirements, or special configurations.
+
+### Adjustments for Different Environments
+Detail the parts of the code that may need to be modified based on the system or environment in which it is run (e.g., file paths, library installation, or hardware configurations). Explain how users can make these changes.
+
+---
+
+
+
+
 
 # Dataset Feature Description
 

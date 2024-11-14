@@ -68,6 +68,7 @@ For `table`, the user can remain it as `fifa.fifa_uncleaned`, the code will just
   - PyTorch
     - Shallow NN
     - Ensemble NN
+      
     **The user can choose to save the model they trained. But it would be better to change the name of the saved files, avoiding to cover the models I uploaded.**
 
 

@@ -8,53 +8,67 @@ ANDREW ID: jinsongy | darenyao
 
 The final course project local code is `course_project_local_final_11_12.ipynb`. For the cloud version of the code, refer to [Cloud Code Version].
 
-## Table of Contents
-1. [Overview](#overview)
-2. [Task Structure](#task-structure)
-3. [Function Descriptions by Task](#function-descriptions-by-task)
-    - [Task 1](#task-1)
-    - [Task 2](#task-2)
-    - [Task 3](#task-3)
-    - [Task 4](#task-4)
-4. [Environment and System Requirements](#environment-and-system-requirements)
-5. [Adjustments for Different Environments](#adjustments-for-different-environments)
-
----
-
-### Overview
-Provide a brief summary of the purpose of your course project, including objectives and key deliverables.
-
-### Task Structure
 The code is organized into four main tasks, each performing distinct functions related to the project goals. In the local notebook (`course_project_local_final_11_12.ipynb`), Tasks 1, 2, and 3 are clearly divided by markdown sections, while Task 4 is handled separately.
 
-### Function Descriptions by Task
+In the following sections, the code and functions will be introduced in the order they appear in the notebook.
 
-#### Task 1
-- **[Function Name]**: Describe the purpose and operation of this function.
-- **[Function Name]**: Further explanations, if necessary.
+## TASK I
 
-#### Task 2
-- **[Function Name]**: Describe the purpose and operation of this function.
-- **[Function Name]**: Further explanations, if necessary.
+### Import SPARK
 
-#### Task 3
-- **[Function Name]**: Describe the purpose and operation of this function.
-- **[Function Name]**: Further explanations, if necessary.
+In this section, the configuration object for SPARK requires change. First, if the user runs the code on MacOs, they should comment the findspark part of the code. Secondly, the user may need to change the PostgreSQL path.(If the user's configuration of spark/postgresql accords the installation guide, then there shouldn't have any problems to run the code.
 
-#### Task 4
-- **[Function Name]**: Describe the purpose and operation of this function.
-- **[Function Name]**: Further explanations, if necessary.
+After importing some crucial modules, the database prooperties `db_properties`  are defined. `db_properties` will be used several times in the following code.
 
-### Environment and System Requirements
-List any dependencies, software versions, or packages needed to run the code. Include any Python package versions, hardware requirements, or special configurations.
+**In this cell, the user should replace the `username`,`password`with their own one.** 
 
-### Adjustments for Different Environments
-Detail the parts of the code that may need to be modified based on the system or environment in which it is run (e.g., file paths, library installation, or hardware configurations). Explain how users can make these changes.
+For `table`, the user can remain it as `fifa.fifa_uncleaned`, the code will just overwrite/create a new table.
 
----
+### Data Cleaning
 
+**Run all the cells sequentially:**
+- A. Reading the data
+  - The user may need to replace the file path.
+- B. Add new column
+  - creating a column for the players year and gender
+- C. Merge the data
+  - Creating a UID for all players
+  - Using the `overwrite` mode to write the uncleaned data `df_union` to PostgresSQL
+- D. Data Cleaning
+  - D.1 Dropping columns with high nullValue ratio
+    - reading back the uncleaned df and naming it `df_uncleaned`
+    - `replace_missing_values`: Transferring all the nullValues into `None`
+    - `show_null_ratio`: Calculate different columns' null ratio
+    - filter out the columns with nullValue ratio over 50%
+    - dropping the url columns
+  - D.2 Checking the dtypes
+    - `add_schema_row`: Creating a df to check whether the columns' data have been correctly inferred or not
+    - transferring position rating columns dtype and calculating the extra scores
+  - D.3 Null Value Handling
+    - I didn't know that we can ignore the female players data in TASK III, so female players' data were seperately treated.
+    - The woman players high null ratio string columns were filled with unknown
+    - For all players, string null values were filled with their columns' mode and numeric null values were filled with medians.
+- E. Data Ingestion
+  - I changed the dbtable name to `fifa.fifa_uncleaned`
 
+## TASK II
 
+## TASK III
+
+**Run all the cells sequentially:**
+
+- A. Read the data back (Only use the male players' data)
+- B. Phase 2 of Data Engineering
+  - (1)-(5)
+- C. Model Construction
+  - Cont.(6)-(7)
+  - SPARK
+    - GBT regressor
+    - Random Forest
+  - PyTorch
+    - Shallow NN
+    - Ensemble NN
+    **The user can choose to save the model they trained. But it would be better to change the name of the saved files, avoiding to cover the models I uploaded.**
 
 
 # Dataset Feature Description

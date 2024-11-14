@@ -49,7 +49,7 @@ For `table`, the user can remain it as `fifa.fifa_uncleaned`, the code will just
     - The woman players high null ratio string columns were filled with unknown
     - For all players, string null values were filled with their columns' mode and numeric null values were filled with medians.
 - E. Data Ingestion
-  - I changed the dbtable name to `fifa.fifa_uncleaned`
+  - I changed the dbtable name to `fifa.fifa_cleaned`
 
 ## TASK II
 

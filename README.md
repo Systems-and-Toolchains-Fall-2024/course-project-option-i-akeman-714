@@ -6,7 +6,7 @@ ANDREW ID: jinsongy | darenyao
 
 # CODE WALKTHROUGH
 
-The final course project local code is `course_project_local_final_11_12.ipynb`. For the cloud version of the code, refer to [Cloud Code Version].
+The final course project local code is `course_project_local_final_11_12.ipynb`. For the cloud version of the code, refer to `course_project_final cloud_11_14.ipynb`
 
 The code is organized into four main tasks, each performing distinct functions related to the project goals. In the local notebook (`course_project_local_final_11_12.ipynb`), Tasks 1, 2, and 3 are clearly divided by markdown sections, while Task 4 is handled separately.
 

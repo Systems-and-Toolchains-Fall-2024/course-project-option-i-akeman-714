@@ -53,6 +53,25 @@ For `table`, the user can remain it as `fifa.fifa_uncleaned`, the code will just
 
 ## TASK II
 
+1. get_top_clubs_by_contract_year(X, Y, Z)
+Functionality: This function identifies the top Y clubs with the highest number of players whose contracts are set to expire in year Z or later. Analyzing this information provides insight into clubs with upcoming contract renewals and the stability of team compositions.
+Parameters:
+X: The reference year for the data analysis, which should be between 2015 and 2022 (inclusive).
+Y: The number of top clubs to return. Must be a positive integer.
+Z: The minimum contract expiration year to consider, set to 2023 or any year after.
+
+2. get_clubs_by_average_age(X, Y, order)
+Functionality: This function returns X clubs with the highest or lowest average player age for a given year Y. Average player age can provide insights into the experience or energy levels of a club.
+Parameters:
+X: The number of clubs to retrieve. If a non-positive integer is passed, the function will handle this case gracefully.
+Y: The reference year, which should be between 2015 and 2022 (inclusive).
+order: Specifies whether to retrieve clubs with the "highest" or "lowest" average age.
+Special Cases:
+If multiple clubs share the same rank as the last requested position (e.g., X=5 but several clubs share the 5th position), all clubs with this rank will be included in the output.
+
+3. get_most_popular_nationality_by_year()
+Functionality: This function determines the most popular nationality among players for each year available in the dataset. This insight can highlight global talent distribution and the diversity of player origins over time.
+
 ## TASK III
 
 **Run all the cells sequentially:**
@@ -71,6 +90,8 @@ For `table`, the user can remain it as `fifa.fifa_uncleaned`, the code will just
       
     **The user can choose to save the model they trained. But it would be better to change the name of the saved files, avoiding to cover the models I uploaded.**
 
+## Task IIII
+https://cmu.box.com/s/14bmhp1ui16bc3ton0iqcldvf271wn6w
 
 # Dataset Feature Description
 
